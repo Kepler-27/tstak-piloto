@@ -1,0 +1,102 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="es" class="no-js">
+	<head>
+		<meta charset="UTF-8">
+		{% block titulo %}<title>Piloto de estetica</title>{% endblock %}
+		<link rel="stylesheet" href="static/css/style2.css">
+		<link rel="stylesheet" type="text/css" href="static/css/responsive.css">
+		<script>(function(e,t,n){var r=e.querySelectorAll("html")[0];r.className=r.className.replace(/(^|\s)no-js(\s|$)/,"$1js$2")})(document,window,0);</script>
+		<!--script type="text/javascript" src="static/js/java.js"></script-->
+	</head>
+
+	<body>
+		<img class="fondo_prron" src="static/resourse/fondo_bien_prron.png" alt="fondo_prron">
+		<nav>
+			<div class="titulo">
+				<div>
+					<h1><a href="/">TSTAK</a></h1>
+					<p><a href="/">Enviando posibilidades</a></p>
+				</div>
+			</div>
+			
+			{% if usuario.is_authenticated %}
+			
+			<img class="login" src="static/resourse/login.png">
+
+			<div class="queso">
+				<div>
+					<p style="text-transform: capitalize">{{usuario.username}}</p>
+				</div>
+			</div>
+
+			<div class="nave">
+				<section>
+					<div>
+						<p><a href="/">Inicio</a></p>
+					</div>
+				</section>
+
+				<section>
+					<div>
+						<p><a href="{% url 'mensajeria' %}">Enviar mensajes</a></p>
+					</div>
+				</section>
+
+				<section>
+					<div>
+						<p><a href="{% url 'archivos' %}">Mis archivos</a></p>
+					</div>
+				</section>
+
+				<section>
+					<div>
+						<p><a href="{% url 'perejil' %}">Editar perfil</a></p>
+					</div>
+				</section>
+
+				<section>
+					<div>
+						<p><a href="{% url 'cerrar' %}">Cerrar sesión</a></p>
+					</div>
+				</section>
+			</div>
+			{% else %}
+			<div class="nave">
+				<section>
+					<div>
+						{% block ingresar %}<p><a href="{% url 'ingresar' %}">Inicia sesión</a></p>{% endblock %}
+					</div>
+				</section>
+
+				<section>
+					<div>
+						{% block sesion %}<p><a href="{% url 'sesion' %}">¡Regístrate!</a></p>{% endblock %}
+					</div>
+				</section>
+
+				<section>
+					<div>
+						<p><a href="{% url 'servicio' %}">Servicios</a></p>
+					</div>
+				</section>
+
+				<section>
+					<div>
+						<p><a href="">¿Comó funciona?</a></p>
+					</div>
+				</section>
+			</div>
+			{% endif %}
+			
+		</nav>
+
+		<div class="contenedor">
+			{% block contenedor %}
+			{% endblock %}
+		</div>
+
+		<script src="static/js/java.js"></script>
+		<script>document.write('<script src="http://' + (location.host || '192.168.1.64').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+	</body>
+</html>

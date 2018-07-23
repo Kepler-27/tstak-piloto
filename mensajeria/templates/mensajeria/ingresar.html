@@ -1,0 +1,34 @@
+{% extends 'mensajeria/base2.html' %}
+
+{% block titulo %} <title>¡Inicia sesion!</title> {% endblock %}
+
+{% block ingresar%} <p><a class="activate" href="{% url 'ingresar' %}">Inicia sesion</a></p> {% endblock %}
+
+{% block contenedor %}
+
+<div class="bloque_generico">
+
+	<div class="inicie">
+		<h1>¡Inicia sesion!</h1>
+		<p>Nos alegra volverte a tener aqui</p>
+	</div>
+	
+	<!--div class="formreg"-->
+		<form method="POST" id="formulario">
+			{% csrf_token %}
+			<div>
+				<input type="text" id="id_username" name="username" maxlength="150" autofocus="" required="" placeholder="Nombre de usuario">
+			</div>
+
+			<div>
+				<input type="password" id="id_password" name="password" required="" placeholder="Contraseña">
+			</div>
+			
+			<div class="submit">
+				<input type="submit" value="Inicia sesion">
+			</div>
+		</form>
+	<!--/div-->
+</div>
+
+{% endblock %}

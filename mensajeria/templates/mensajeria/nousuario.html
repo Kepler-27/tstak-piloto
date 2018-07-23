@@ -1,0 +1,12 @@
+{% extends 'mensajeria/base2.html' %}
+
+{% block titulo %} <title>Error de acceso</title> {% endblock %}
+
+{% block inicio %} <li><a href="{% url 'index' %}">Inicio</a></li> {% endblock %}
+
+{% block contenedor %}
+
+<h1>Error de acceso</h1>
+<p>El usuario o la contraseña no coincide o no existe</p>
+
+{% endblock %}

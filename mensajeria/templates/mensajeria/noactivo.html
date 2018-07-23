@@ -1,0 +1,12 @@
+{% extends 'mensajeria/base2.html' %}
+
+{% block titulo %} <title>Usuario desactivado</title> {% endblock %}
+
+{% block inicio %} <li><a href="{% url 'index' %}">Inicio</a></li> {% endblock %}
+
+{% block contenedor %}
+
+<h1>EL usuario no esta activo</h1>
+
+<p>Contacte con el administrador para resolver el problema</p>
+{% endblock %}

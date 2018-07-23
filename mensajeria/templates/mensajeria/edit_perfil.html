@@ -1,0 +1,23 @@
+{% extends 'mensajeria/base2.html' %}
+
+{% block titulo %} <title>Mi perejil :v</title> {% endblock %}
+
+{% block contenedor %}
+
+<div class="bloque_generico">
+	<form method="POST" action="" enctype="multipart/form-data">
+	{% csrf_token %}
+		<!--div>
+			<input type="text" id="id_filename" name="filename" maxlength="100" required="" placeholder="Nombre del archivo">
+		</div>	
+		<div class="submit-2">
+			<input type="file" required="" name="docfile" id="id_docfile" class="inputfile inputfile-2" data-multiple-caption="{count} files selected" multiple />
+			<label for="id_docfile"><span>Seleccionar archivo</span></label>
+			<input type="submit" value="¡Subir archivo!">
+		</div-->
+		{{formulario}}
+		<input type="submit" value="¡Subir archivo!">
+	</form>
+</div>
+
+{% endblock %}

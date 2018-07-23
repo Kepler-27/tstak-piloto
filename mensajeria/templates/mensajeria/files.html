@@ -1,0 +1,56 @@
+{% extends 'mensajeria/base2.html' %}
+
+{% block titulo %} <title>Mis archivos</title> {% endblock %}
+
+{% block contenedor %}
+
+<div class="bloque_generico">
+
+	<div class="archivos">
+		<section>
+			<div style="display:block">
+				<h1>Mis archivos</h1>
+				
+				<div class="file_excel">
+					<div>
+						{% if excels.count == 0 %}
+						<div class="file-none">
+							<p>No tienes ningun archivo. <span style="color:#E84A5F">¡Sube alguno!</span></p>
+						</div>
+						{% else %}
+						{% for exceles in excels %}
+						<div>
+							<img src="static/resourse/icon-excel.png">
+							<p>Nombre del Archivo: <a href="{{exceles.docfile.url}}">{{exceles.filename}}</a></p>
+						</div>
+						{% endfor %}
+						{% endif %}
+					</div>
+				</div>
+			</div>
+
+			<div style="display:block">
+				<div class="file-titulo">
+					<h1>Sube tus archivos</h1>
+					<p></p>
+				</div>
+
+				<form method="POST" action="" enctype="multipart/form-data">
+					{% csrf_token %}
+					<div>
+						<input type="text" id="id_filename" name="filename" maxlength="100" required="" placeholder="Nombre del archivo">
+					</div>	
+					<div class="submit-2">
+						<input type="file" required="" name="docfile" id="id_docfile" class="inputfile inputfile-2" data-multiple-caption="{count} files selected" multiple />
+						<label for="id_docfile"><span>Seleccionar archivo</span></label>
+						<input type="submit" value="¡Subir archivo!">
+					</div>
+				</form>
+			</div>
+		</section>
+		{% for yo in excels %}
+		<iframe src="http://docs.google.com/gview?url={{yo.docfile.url}}&embedded=true" style="width:600px; height:500px;" frameborder="0"></iframe>
+		{% endfor %}
+	</div>
+</div>
+{% endblock %}

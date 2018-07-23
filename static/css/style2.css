@@ -1,0 +1,470 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+@font-face{
+	font-family: "shido";
+	src: url(../resourse/Roboto.ttf);
+}
+
+body{
+	font-family: "shido", sans-serif, Arial, Helvetica;
+	background-color: #202020;	
+}
+
+.fondo_prron{
+	position: fixed;
+	z-index: 1;
+	width: 100%;
+}
+
+nav{
+	z-index: 2;
+	width: 20%;
+	height: 100%;
+	position: fixed;
+	background-color: #171717;
+}
+
+.titulo{
+	width: 100%;
+	margin: 0 0 7.5px 0;
+	height: 135px;
+	background-color: #E84A5F;
+	display: inline-flex;
+}
+
+.titulo div{
+	width: 200px;
+	height: 95px;
+	margin: auto;
+	color: #2A363B;
+}
+
+.titulo div h1{
+	text-align: center;
+	font-size: 2em;
+}
+
+.titulo div a{
+	text-decoration: none;
+	color: #2A363B;
+}
+
+.titulo div p{
+	font-size: 1em;
+	text-align: center;
+}
+
+.nave{
+	width: 95%;
+	margin: auto;
+}
+
+.nave section{
+	display: inline-flex;
+	margin: 0 0 7.5px 0;
+	width: 100%;
+	height: 70px;
+	background-color: #E84A5F;
+}
+
+.nave section div{
+	margin: auto;
+	width: 200px;
+	height: 30px;
+}
+
+.nave section div p{
+	text-align: center;
+	font-size: 1.5em;
+}
+
+.nave section div p a{
+	text-decoration: none;
+	color: white;
+	font-size: 1em;
+}
+
+.nave section div p a:hover{
+	text-decoration: underline;
+}
+
+.nave section div p .activate{
+	text-decoration: underline;
+}
+
+.login{
+	max-width: 100px;
+	position: absolute;
+	left: 90px;
+	top: 80px;
+}
+
+.queso{
+	width: 100%;
+	height: 100px;
+	display: inline-flex;
+}
+
+.queso div{
+	width: 200px;
+	height: 40px;
+	margin: 40px auto;
+}
+
+.queso div p{
+	text-align: center;
+	color: #E84A5F;
+	font-size: 1.5em;
+}
+
+.contenedor{
+	z-index: 3;
+	width: 80%;
+	position: absolute;
+	height: 100%;
+	display: inline-flex;
+	/*padding: 100px 0 0 0;*/
+	margin: 0 0 0 20%;
+}
+
+.quien{
+	width: 100%;
+	/*height: 600px;*/
+	margin: 50px 0;
+}
+
+.quien div{
+	width: 600px;
+	margin: auto;
+	color: white;
+}
+
+.quien div h1{
+	text-align: center;
+	font-size: 3.5em;
+}
+
+.quien .divi{
+	display: inline-flex;
+	width: 100%;
+}
+
+.quien .divi div{
+	width: 50%;
+	/*height: 500px;*/
+}
+
+.quien .divi div p{
+	text-align: justify;
+	margin: 20px;
+	color: white;
+	font-size: 25px;
+}
+
+
+.serv{
+	width: 100%;
+	/*height: 600px;*/
+	margin: 50px 0;
+	background-color: #344750;
+}
+
+.serv div{
+	width: 600px;
+	margin: 50px auto;
+	color: white;
+}
+
+.serv div h1{
+	text-align: center;
+	font-size: 3.5em;
+}
+
+.serv .divi{
+	display: inline-flex;
+	width: 100%;
+}
+
+.serv .divi div{
+	width: 50%;
+	/*height: 500px;*/
+}
+
+.serv .divi div p{
+	text-align: justify;
+	margin: 20px;
+	color: white;
+	font-size: 25px;
+}
+
+
+.bloque_generico{
+	margin: auto;
+	width: 100%;
+	/*height: 100%;
+	/*background-color: #f5f5f5;*/
+}
+
+.helptext{
+	display: none;
+}
+
+.inicie{
+	width: 400px; 
+	margin: auto auto 50px auto;
+}
+
+.inicie h1{
+	text-align: center;
+	font-size: 2.5em;
+	color: #fff;
+}
+
+.inicie p{
+	text-align: center;
+	color: #8c8c8c;
+}
+
+.inicie a{
+	color: #8c8c8c;
+}
+
+/*.formreg{
+	width: 500px;
+	margin: auto;
+}*/
+
+form div{
+	margin: 0 0 15px;
+	width: 100%;
+}
+
+form{
+	width: 500px;
+	margin: auto;
+}
+
+form div input{
+	background: none;
+	width: 92.6%;
+	font-size: 1em;
+	padding: 12px 16px;
+	border: 2px solid #fff;
+	color: #ffffff;
+	margin: 0;
+	font-family: "shido", sans-serif, Arial, Helvetica;
+}
+
+.submit{
+	width: 250px;
+	margin: auto;
+}
+
+.submit input[type="submit"]{
+	width: 100%;
+	cursor: pointer;
+}
+
+.submit input[type="submit"]:hover{
+	background-color: #fff;
+	color: #000;
+	transition: background-color 0.4s;
+}
+
+.submit-2{
+	width: 100%;
+	display: inline-flex;
+}
+
+.submit-2 input[type="submit"]{
+	width: 45%;
+	margin: 0 0 auto auto;
+	cursor: pointer;
+}
+
+.submit-2 input[type="submit"]:hover{
+	background-color: #fff;
+	color: #000;
+	transition: background-color 0.4s;
+}
+
+.js .inputfile {
+	text-align: center;
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.inputfile + label {
+    width: 45%;
+    font-size: 1em;
+    /* 20px */
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+    padding: 12px 16px;
+    /* 10px 20px */
+    border: 2px solid #fff;
+}
+
+.no-js .inputfile + label {
+    display: none;
+    border: 2px solid #fff;
+}
+
+.inputfile:focus + label,
+.inputfile.has-focus + label {
+    outline: 1px dotted #000;
+    outline: -webkit-focus-ring-color auto 5px;
+}
+
+.inputfile-2 + label {
+    color: white;
+    text-align: center;
+    border: 2px solid currentColor;
+}
+
+.inputfile-2:focus + label,
+.inputfile-2.has-focus + label,
+.inputfile-2 + label:hover {
+    color: black;
+    background-color: white;
+    transition: background-color 0.4s;
+    border: 2px solid #fff;
+}
+
+
+
+.archivos{
+	width: 100%;
+	height: 100%;
+	font-family: "shido", sans-serif, Arial, Helvetica;
+}
+
+
+.archivos section{
+	width: 100%;
+	display: inline-flex;
+}
+
+.archivos section div{
+	font-family: "shido", sans-serif, Arial, Helvetica;
+	display: inline-flex;
+	/*background-color: #989898;*/
+	width: 47.5%;
+	height: 400px;
+	margin: auto;
+}
+
+.archivos section div form div{
+	margin: 0 0 15px;
+	width: 100%;
+	height: 48px;
+}
+
+.archivos section div form{
+	width: 100%;
+	margin: auto;
+}
+
+.archivos section div form div input{
+	background: none;
+	width: 92.6%;
+	font-size: 1em;
+	padding: 12px 16px;
+	border: 2px solid #fff;
+	color: #ffffff;
+	margin: 0;
+	font-family: "shido", sans-serif, Arial, Helvetica;
+}
+
+.archivos section div .file-titulo{
+	height: auto;
+	display: block;
+	width: 100%;
+	margin: 0 0 30px;
+	font-family: "shido";
+}
+
+.archivos section div .file-titulo h1{
+	font-size: 27px;
+	margin: 20px auto 0 auto;
+	color: white;
+	text-align: center;
+}
+
+.archivos section div .file-titulo p{
+	text-align: center;
+	font-size: 16px;
+	color: white;
+}
+
+.archivos section div h1{
+	font-size: 27px;
+	margin: 20px auto 20px auto;
+	color: white;
+	text-align: center;
+}
+
+.archivos section div .file_excel{
+	display: block;
+	width: 100%;
+	overflow: auto;
+	height: 300px;
+	/*background-color: red;*/
+}
+
+.file_excel::-webkit-scrollbar{
+	width: 5px;
+}
+
+.file_excel::-webkit-scrollbar-thumb{
+	background: #E84A5F;
+	border-radius: 3px;
+}
+
+.archivos section div .file_excel div{
+	display: block;
+	width: 95%;
+	margin: 15px auto;
+	height: 72px;
+	/*background-color: blue;*/
+}
+
+.archivos section div .file_excel div .file-none{
+	width: 100%;
+	display: inline-flex;
+}
+
+.archivos section div .file_excel div .file-none p{
+	text-align: center;
+	margin: auto;
+}
+
+.archivos section div .file_excel div div{
+	display: inline-flex;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+}
+
+.archivos section div .file_excel div div img{
+	height: 50px;
+}
+
+.archivos section div .file_excel div div p{
+	margin: 15px 0 0 10px;
+	color: white;
+}
+
+.archivos section div .file_excel div div a{
+	color: #E84A5F;
+}

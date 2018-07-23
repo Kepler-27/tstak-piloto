@@ -1,0 +1,74 @@
+{% extends 'mensajeria/base2.html' %}
+
+{% block titulo %} <title>¡Inicia sesion o registrate!</title> {% endblock %}
+
+{% block sesion %}<p><a class="activate" href="{% url 'sesion' %}">¡Registrate!</a></p>{% endblock %}
+
+{% block contenedor %}
+
+<div class="bloque_generico">
+
+	<div class="inicie">
+		<h1>¡Registrate!</h1>
+		<p>Si ya tienes una cuenta, <a href="{% url 'ingresar' %}">¡Inicia sesion!</a></p>
+	</div>
+	
+	<!--div class="formreg"-->
+		<form method="POST" id="formulario">
+			{% csrf_token %}
+			<div>
+				<input type="text" id="id_username" name="username" maxlength="150" autofocus="" required="" placeholder="Nombre de usuario">
+			</div>
+
+			<div>
+				<input type="password" id="id_password1" name="password1" required="" placeholder="Contraseña">
+			</div>
+
+			<div>
+				<input type="password" id="id_password2" name="password2" required="" placeholder="Confirmar contraseña">
+			</div>
+			
+			<div class="submit">
+				<input type="submit" value="Registrame">
+			</div>
+		</form>
+	<!--/div-->
+
+
+<!--h1>Registrate</h1>
+<form id="formulario" method="POST">
+	{% csrf_token %}
+	<{{formulario}}>
+
+	<label for="id_username">Nombre de usuario:</label>
+	<input type="text" id="id_username" name="username" maxlength="150" autofocus="" required="">
+	<br>
+
+	<span class="helptext">Requerido. 150 carácteres como máximo. Únicamente letras, dígitos y @/./+/-/_</span>
+	<br>
+
+	<label for="id_password1">Contraseña:</label>
+	<input type="password" id="id_password1" name="password1" required="">
+	<br>
+
+	<span class="helptext">
+		<ul>
+			<li>Su contraseña no puede asemejarse a su otra informacion personal.</li>
+			<li>Su contraseña debe contener al menos 8 caracteres.</li>
+			<li>Su contraseña no puede ser una clave utilizada comunente.</li>
+			<li>Su contraseña no puede ser completamente numérica</li>
+		</ul>
+	</span>
+	<br>
+
+	<label for="id_password2">Contraseña (confirmación):</label>
+	<input type="password" id="id_password2" name="password2" required="">
+	<br>
+
+	<span class="helptext">Para verificar, introdusca la misma contraseña anterior.</span>
+
+	<p><input type="submit" value="Registrar"></p>
+</form-->
+</div>
+
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'mensajeria/base2.html' %}
+
+{% block titulo %} <title>Hola {{usuario.username|upper}}</title> {% endblock %}
+
+{% block inicio %} <li><a href="{% url 'index' %}">Inicio</a></li> {% endblock %}
+
+{% block contenedor %}
+
+<div class="bloque_generico" style="color: white">
+	<p>Bienvenido {{usuario.username}}, la ultima ves que te vimos por aqui fue el {{usuario.last_login}}.</p>
+
+	<p>Eres miembro desde {{usuario.date_joined}}</p>
+</div>
+
+{% endblock %}
